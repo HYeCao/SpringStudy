@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd
+       					   http://www.springframework.org/schema/aop 
+       					   http://www.springframework.org/schema/aop/spring-aop.xsd">
+	<!-- 创建数据源 -->
+	<bean id="dataSourceId" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean>
+
+	<!-- 创建模板 ,需要注入数据源
+	       此处导入的C3P0的包存在问题，3.2 4.0之间存在差异，
+	       需要通过视频中的弹幕提示进行修改
+	-->
+	<bean id="jdbcTemplateId" class="org.springframework.jdbc.core.C3P0">
+		<property name="dataSource" ref="dataSourceId"></property>
+	</bean>
+	
+	<!-- 配置dao -->
+	<bean id="userDaoId" class="spring_c3p0.UserDao">
+		<property name="jdbcTemplate" ref="jdbcTemplateId"></property>
+	</bean>
+
+    
+</beans>

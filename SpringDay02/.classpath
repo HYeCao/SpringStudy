@@ -22,5 +22,6 @@
 	<classpathentry kind="lib" path="D:/新建文件夹/新建文件夹/JAVA/java/spring-framework-4.0.0.RELEASE/libs/spring-expression-4.0.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/新建文件夹/新建文件夹/JAVA/java/commons-logging-1.2-bin/commons-logging-1.2/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="D:/新建文件夹/新建文件夹/JAVA/java/spring-framework-4.0.0.RELEASE/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/新建文件夹/新建文件夹/JAVA/java/spring-3.2.0.RELEASE-dependencies/spring-3.2.0-dependencies/org.aspectj/com.springsource.org.aspectj.weaver/1.6.8.RELEASE/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
